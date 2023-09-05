@@ -1,10 +1,16 @@
-.container {
+#container {
     display:flex;
+    border: 2px solid black;
     flex-wrap: wrap;
+    width: 520px;
 }
 
 .grid{
-    border:2px solid red;
-    height : 50px;
-    width: 50px;
+    height: 130px;
+    width: 130px;
 }
+
+.black{
+    background-color: black;
+}
+
