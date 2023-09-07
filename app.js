@@ -2,9 +2,11 @@ const containerDiv = document.querySelector('#container');
 
 let divArray = [];
 
+
 const sizeButton = document.querySelector('#grid-size');
 
 modifyDiv(16);
+
 
 
 
