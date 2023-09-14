@@ -1,14 +1,23 @@
 const containerDiv = document.querySelector('#container');
 
 let divArray = [];
+let eraser = false;
 
 
 const sizeButton = document.querySelector('#grid-size');
 
 modifyDiv(16);
 
+const penButton = document.querySelector('#pen');
+const eraserButton = document.querySelector('#eraser');
 
-
+penButton.onclick = () => {
+    eraser = false;
+}
+eraserButton.onclick = () => {
+    eraser = true;
+    
+}
 
 
 sizeButton.addEventListener('click',() => {
@@ -44,7 +53,15 @@ function modifyDiv(size) {
             divArray.push(createDiv(size));
             containerDiv.appendChild(divArray[i]);
             divArray[i].addEventListener('mouseover',() => {
-            divArray[i].style.setProperty('background-color','black');
+                if(eraser == true) {
+                    divArray[i].classList.remove('black');
+                    divArray[i].classList.add('white');
+                }
+                else {
+                    divArray[i].classList.remove('white');
+                    divArray[i].classList.add('black');
+                }
+            
             
         })
     }
