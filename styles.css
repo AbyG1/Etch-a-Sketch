@@ -14,8 +14,23 @@ body {
     background-color: gray;
 }
 
+.black {
+    background-color: black;
+}
 
+.white {
+    background-color: white;
+}
 
+#grid-size {
+    display: block;
+    margin: 20px;
+    padding: 5px 10px;
+}
+
+button {
+    margin-left: 15px;
+}
 
 
 
